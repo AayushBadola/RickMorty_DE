@@ -43,9 +43,9 @@ Install the following before running the project:
 
 | Tool | Version |
 |---|---|
-| Python | 3.13 or newer |
-| Docker Desktop | latest |
-| Git | latest |
+| Python | 3.11 or newer |
+| Docker Desktop | 29.7 or above|
+
 
 Docker Desktop provides the isolated PostgreSQL environment used by the project.
 
@@ -54,7 +54,7 @@ Docker Desktop provides the isolated PostgreSQL environment used by the project.
 ### 1. Clone the repository
 
 ```powershell
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/AayushBadola/RickMorty_DE.git
 cd RickMorty_DE
 ```
 
