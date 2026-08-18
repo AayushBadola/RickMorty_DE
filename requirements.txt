@@ -1,0 +1,5 @@
+requests 
+pandas 
+psycopg[binary]
+dotenv
+

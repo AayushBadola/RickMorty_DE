@@ -1,0 +1,28 @@
+services:
+
+  postgres:
+    image: postgres:18
+    container_name: rickmorty_postgres
+    env_file:
+      - .env
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+  app:
+    build: .
+    container_name: rickmorty_app
+    env_file:
+      - .env
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
